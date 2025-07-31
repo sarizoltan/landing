@@ -1,0 +1,479 @@
+/* ===========================================
+   LANDINGPARK.HU - RESPONSIVE STYLES
+   Mobile-first responsive design
+   ========================================== */
+
+/* Mobile Navigation */
+@media (max-width: 1024px) {
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-xl);
+    transition: left var(--transition-base);
+    z-index: 1000;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all var(--transition-base);
+  }
+
+  .nav-menu.active .nav-item {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav-menu.active .nav-item:nth-child(1) { transition-delay: 0.1s; }
+  .nav-menu.active .nav-item:nth-child(2) { transition-delay: 0.2s; }
+  .nav-menu.active .nav-item:nth-child(3) { transition-delay: 0.3s; }
+  .nav-menu.active .nav-item:nth-child(4) { transition-delay: 0.4s; }
+  .nav-menu.active .nav-item:nth-child(5) { transition-delay: 0.5s; }
+  .nav-menu.active .nav-item:nth-child(6) { transition-delay: 0.6s; }
+  .nav-menu.active .nav-item:nth-child(7) { transition-delay: 0.7s; }
+
+  .nav-link {
+    font-size: var(--font-size-xl);
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .theme-toggle {
+    display: none;
+  }
+}
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+  :root {
+    --font-size-6xl: 3rem;
+    --font-size-5xl: 2.5rem;
+    --font-size-4xl: 2rem;
+    --font-size-3xl: 1.75rem;
+  }
+
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+
+  .nav-container {
+    padding: 0 var(--spacing-md);
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 120px 0 50px;
+    min-height: 90vh;
+  }
+
+  .hero-container {
+    padding: 0 var(--spacing-md);
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 6vw, 3rem);
+  }
+
+  .hero-description {
+    font-size: var(--font-size-base);
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-stats {
+    gap: var(--spacing-lg);
+  }
+
+  .stat-number {
+    font-size: var(--font-size-3xl);
+  }
+
+  .hero-hotspots {
+    display: none;
+  }
+
+  /* Sections */
+  section {
+    padding: 60px 0;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  .section-title {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+  }
+
+  /* Services */
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .service-card {
+    padding: var(--spacing-xl) var(--spacing-lg);
+  }
+
+  /* Benefits Timeline */
+  .timeline-line {
+    display: none;
+  }
+
+  .benefit-item {
+    flex-direction: column !important;
+    text-align: center;
+    gap: var(--spacing-lg);
+  }
+
+  .benefit-item:nth-child(even) .benefit-content {
+    text-align: center;
+  }
+
+  .benefit-content {
+    padding: var(--spacing-lg);
+  }
+
+  /* Process */
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .step-arrow {
+    display: none;
+  }
+
+  /* Pricing */
+  .pricing-card {
+    margin: 0 var(--spacing-md);
+  }
+
+  .extras-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .extra-item {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-md);
+  }
+
+  .extra-content {
+    text-align: center;
+  }
+
+  /* Portfolio */
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  /* Contact */
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+
+  /* Footer */
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+    text-align: center;
+  }
+
+  .footer-links {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+  }
+
+  /* Floating elements */
+  .floating-action-btn {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .fab-main {
+    width: 50px;
+    height: 50px;
+    font-size: var(--font-size-lg);
+  }
+
+  .back-to-top {
+    bottom: 20px;
+    left: 20px;
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+  :root {
+    --spacing-xxl: 3rem;
+    --spacing-xl: 2rem;
+    --spacing-lg: 1.5rem;
+  }
+
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+
+  .nav-container {
+    padding: 0 var(--spacing-sm);
+  }
+
+  /* Typography */
+  .hero-title {
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+  }
+
+  .section-title {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+
+  /* Hero */
+  .hero-container {
+    padding: 0 var(--spacing-sm);
+  }
+
+  .hero-badge {
+    font-size: var(--font-size-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+
+  .hero-description {
+    font-size: var(--font-size-sm);
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .stat-divider {
+    width: 40px;
+    height: 2px;
+    transform: rotate(90deg);
+  }
+
+  /* Buttons */
+  .btn-primary,
+  .btn-secondary {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-size: var(--font-size-base);
+  }
+
+  /* Cards */
+  .service-card {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .benefit-content {
+    padding: var(--spacing-md);
+  }
+
+  .process-step {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  /* Features */
+  .benefit-features {
+    justify-content: center;
+  }
+
+  .feature-tag {
+    font-size: 10px;
+    padding: 4px var(--spacing-xs);
+  }
+
+  /* Pricing */
+  .pricing-card {
+    margin: 0 var(--spacing-sm);
+  }
+
+  .pricing-header {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .amount {
+    font-size: var(--font-size-5xl);
+  }
+
+  .pricing-features {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .pricing-footer {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  /* Forms */
+  .contact-form {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer */
+  .footer-links {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .footer-bottom-content {
+    flex-direction: column;
+    gap: var(--spacing-md);
+    text-align: center;
+  }
+
+  .footer-badges {
+    justify-content: center;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1400px;
+  }
+
+  .hero-title {
+    font-size: clamp(3rem, 6vw, 5rem);
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .extras-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Ultra-wide */
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1600px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .service-icon,
+  .benefit-icon,
+  .step-icon {
+    background-image: var(--primary-gradient);
+  }
+}
+
+/* Landscape orientation on mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero-section {
+    min-height: 70vh;
+    padding: 100px 0 30px;
+  }
+
+  .hero-stats {
+    flex-direction: row;
+    gap: var(--spacing-lg);
+  }
+
+  .stat-divider {
+    transform: none;
+    width: 2px;
+    height: 40px;
+  }
+}
+
+/* Dark mode responsive adjustments */
+@media (max-width: 768px) {
+  [data-theme="dark"] .nav-menu {
+    background: rgba(0, 0, 0, 0.95);
+  }
+
+  [data-theme="dark"] .service-card,
+  [data-theme="dark"] .benefit-content,
+  [data-theme="dark"] .process-step {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .hero-hotspots,
+  .floating-elements,
+  .morphing-blob {
+    display: none;
+  }
+
+  .nav-item {
+    transition: none !important;
+  }
+
+  .service-card:hover,
+  .benefit-content:hover,
+  .process-step:hover {
+    transform: none;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  :root {
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.3);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.3);
+    --shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.5);
+  }
+
+  .glass-card {
+    border-width: 2px;
+  }
+
+  .service-card,
+  .benefit-content,
+  .process-step {
+    border-width: 2px;
+  }
+}

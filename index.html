@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professzionális landing oldalak 48 órán belül. Komplett csomag: weboldal + domain + tárhely = 45.000 Ft">
+    <title>Landingpark.hu - Modern Landing Oldalak</title>
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <span class="logo-text">Landingpark</span>
+            </div>
+            <div class="loading-progress">
+                <div class="loading-bar"></div>
+            </div>
+            <div class="loading-percent">0%</div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="header glassmorphism" id="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo" data-aos="fade-right">
+                    <div class="logo-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <rect width="40" height="40" rx="8" fill="url(#logoGradient)"/>
+                            <path d="M12 14L20 22L28 14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <defs>
+                                <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#667eea"/>
+                                    <stop offset="100%" style="stop-color:#764ba2"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <span class="logo-text">Landingpark</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link active">
+                            <span class="nav-text">Főoldal</span>
+                            <span class="nav-indicator"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#services" class="nav-link">
+                            <span class="nav-text">Szolgáltatások</span>
+                            <span class="nav-indicator"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#benefits" class="nav-link">
+                            <span class="nav-text">Előnyök</span>
+                            <span class="nav-indicator"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#process" class="nav-link">
+                            <span class="nav-text">Folyamat</span>
+                            <span class="nav-indicator"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#pricing" class="nav-link">
+                            <span class="nav-text">Árak</span>
+                            <span class="nav-indicator"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#portfolio" class="nav-link">
+                            <span class="nav-text">Portfólió</span>
+                            <span class="nav-indicator"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link cta-nav">
+                            <span class="nav-text">Kapcsolat</span>
+                            <span class="nav-glow"></span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <!-- Theme Toggle -->
+                <div class="theme-toggle" id="themeToggle">
+                    <div class="theme-toggle-track">
+                        <div class="theme-toggle-thumb">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <div class="nav-toggle" id="navToggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Floating Action Button -->
+    <div class="floating-action-btn" id="floatingBtn">
+        <div class="fab-main">
+            <i class="fas fa-comments"></i>
+        </div>
+        <div class="fab-tooltip">Azonnali ajánlat</div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <!-- Animated Background -->
+        <div class="hero-bg">
+            <div class="bg-gradient"></div>
+            <div class="floating-elements">
+                <div class="floating-element" style="--delay: 0s; --duration: 20s;"></div>
+                <div class="floating-element" style="--delay: 5s; --duration: 25s;"></div>
+                <div class="floating-element" style="--delay: 10s; --duration: 30s;"></div>
+                <div class="floating-element" style="--delay: 15s; --duration: 18s;"></div>
+            </div>
+            <div class="particles" id="particles"></div>
+        </div>
+        
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge" data-aos="fade-up" data-aos-delay="200">
+                    <span class="badge-icon">🚀</span>
+                    <span class="badge-text">48 órás expressz szállítás</span>
+                </div>
+                
+                <h1 class="hero-title" data-aos="fade-up" data-aos-delay="400">
+                    <span class="title-line">Professzionális</span>
+                    <span class="title-line highlight">Landing Oldalak</span>
+                    <span class="title-line">amelyek <span class="typed-text" id="typedText"></span></span>
+                </h1>
+                
+                <p class="hero-description" data-aos="fade-up" data-aos-delay="600">
+                    Komplett csomag weboldal + domain + tárhely mindössze 45.000 Ft-ért.
+                    <br>Egy év gondtalan működés garantálva.
+                </p>
+                
+                <div class="hero-cta" data-aos="fade-up" data-aos-delay="800">
+                    <a href="#contact" class="btn-primary btn-glow">
+                        <span class="btn-text">Kezdjük el!</span>
+                        <span class="btn-icon">
+                            <i class="fas fa-arrow-right"></i>
+                        </span>
+                    </a>
+                    <a href="#services" class="btn-secondary">
+                        <span class="btn-text">Tudj meg többet</span>
+                        <span class="btn-icon">
+                            <i class="fas fa-play"></i>
+                        </span>
+                    </a>
+                </div>
+                
+                <!-- Interactive Hotspots -->
+                <div class="hero-hotspots">
+                    <div class="hotspot" data-hotspot="speed" style="top: 20%; left: 80%;">
+                        <div class="hotspot-pulse"></div>
+                        <div class="hotspot-tooltip">
+                            <h4>48h Szállítás</h4>
+                            <p>Expressz kivitelezés</p>
+                        </div>
+                    </div>
+                    
+                    <div class="hotspot" data-hotspot="price" style="top: 60%; left: 10%;">
+                        <div class="hotspot-pulse"></div>
+                        <div class="hotspot-tooltip">
+                            <h4>45.000 Ft</h4>
+                            <p>All-in-one csomag</p>
+                        </div>
+                    </div>
+                    
+                    <div class="hotspot" data-hotspot="guarantee" style="top: 80%; left: 70%;">
+                        <div class="hotspot-pulse"></div>
+                        <div class="hotspot-tooltip">
+                            <h4>1 év garancia</h4>
+                            <p>Gondtalan működés</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Stats Counter -->
+            <div class="hero-stats" data-aos="fade-up" data-aos-delay="1000">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="150">0</div>
+                    <div class="stat-label">Elkészült oldal</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="48">0</div>
+                    <div class="stat-label">Órás szállítás</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="99">0</div>
+                    <div class="stat-label">% Elégedettség</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="1200">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span class="scroll-text">Görgess le</span>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <span class="badge-icon">💼</span>
+                    <span class="badge-text">Szolgáltatásaink</span>
+                </div>
+                <h2 class="section-title">
+                    Minden, amire szükséged van egy 
+                    <span class="highlight">sikeres online jelenléthez</span>
+                </h2>
+                <p class="section-subtitle">
+                    Teljes körű megoldások egyedi igényeidhez szabva
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <div class="icon-bg"></div>
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Landing Oldal Készítés</h3>
+                    <p>Professzionális, konverziót optimalizált landing oldalak egyedi design-nal és modern technológiákkal.</p>
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Egyedi design</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>SEO optimalizált</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Konverzió fókusz</span>
+                        </div>
+                    </div>
+                    <div class="service-hover-effect"></div>
+                </div>
+                
+                <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <div class="icon-bg"></div>
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Domain & Tárhely</h3>
+                    <p>Ingyenes .hu domain regisztráció és 5GB SSD tárhely 99.9% uptime garanciával egy teljes évre.</p>
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>.hu domain</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>5GB SSD</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>SSL tanúsítvány</span>
+                        </div>
+                    </div>
+                    <div class="service-hover-effect"></div>
+                </div>
+                
+                <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-icon">
+                        <div class="icon-bg"></div>
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Responsive Design</h3>
+                    <p>Minden eszközön tökéletesen működő, mobil-optimalizált oldalak modern technológiákkal.</p>
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Mobile first</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Tablet optimalizált</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Desktop perfekt</span>
+                        </div>
+                    </div>
+                    <div class="service-hover-effect"></div>
+                </div>
+                
+                <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="800">
+                    <div class="service-icon">
+                        <div class="icon-bg"></div>
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Performance</h3>
+                    <p>Villámgyors betöltési idő, optimalizált kód és modern technológiák a legjobb felhasználói élményért.</p>
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Gyors betöltés</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Optimalizált kód</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>CDN használat</span>
+                        </div>
+                    </div>
+                    <div class="service-hover-effect"></div>
+                </div>
+                
+                <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="1000">
+                    <div class="service-icon">
+                        <div class="icon-bg"></div>
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Biztonság</h3>
+                    <p>SSL tanúsítvány, rendszeres biztonsági mentések és védelem a modern fenyegetések ellen.</p>
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>SSL védelem</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Daily backup</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Malware védelem</span>
+                        </div>
+                    </div>
+                    <div class="service-hover-effect"></div>
+                </div>
+                
+                <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="1200">
+                    <div class="service-icon">
+                        <div class="icon-bg"></div>
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Támogatás</h3>
+                    <p>Egy éves ingyenes támogatás és karbantartás professzionális csapatunktól magyar nyelven.</p>
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>1 év support</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Magyar nyelv</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Gyors válasz</span>
+                        </div>
+                    </div>
+                    <div class="service-hover-effect"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <span class="badge-icon">⭐</span>
+                    <span class="badge-text">Előnyök</span>
+                </div>
+                <h2 class="section-title">
+                    Miért válassz <span class="highlight">minket?</span>
+                </h2>
+                <p class="section-subtitle">
+                    A siker kulcsa a részletekben és a professzionális kivitelezésben rejlik
+                </p>
+            </div>
+            
+            <div class="benefits-timeline">
+                <div class="timeline-line"></div>
+                
+                <div class="benefit-item" data-aos="fade-right" data-aos-delay="200">
+                    <div class="benefit-number">01</div>
+                    <div class="benefit-content">
+                        <h3>Lightning Fast Delivery</h3>
+                        <p>48 órán belül készen áll a professzionális landing oldal. Expressz szállítás extra díj nélkül.</p>
+                        <div class="benefit-features">
+                            <span class="feature-tag">Expressz</span>
+                            <span class="feature-tag">Garantált</span>
+                            <span class="feature-tag">Professzionális</span>
+                        </div>
+                    </div>
+                    <div class="benefit-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                </div>
+                
+                <div class="benefit-item" data-aos="fade-left" data-aos-delay="400">
+                    <div class="benefit-number">02</div>
+                    <div class="benefit-content">
+                        <h3>Transparent Pricing</h3>
+                        <p>Egy ár, minden benne. Rejtett költségek nélkül. Weboldal + domain + tárhely = 45.000 Ft.</p>
+                        <div class="benefit-features">
+                            <span class="feature-tag">All-in-one</span>
+                            <span class="feature-tag">Átlátható</span>
+                            <span class="feature-tag">Fix ár</span>
+                        </div>
+                    </div>
+                    <div class="benefit-icon">
+                        <i class="fas fa-hand-holding-dollar"></i>
+                    </div>
+                </div>
+                
+                <div class="benefit-item" data-aos="fade-right" data-aos-delay="600">
+                    <div class="benefit-number">03</div>
+                    <div class="benefit-content">
+                        <h3>Premium Quality</h3>
+                        <p>Egyedi design, modern technológiák és konverzió-optimalizált megoldások minden projektben.</p>
+                        <div class="benefit-features">
+                            <span class="feature-tag">Egyedi</span>
+                            <span class="feature-tag">Modern</span>
+                            <span class="feature-tag">Optimalizált</span>
+                        </div>
+                    </div>
+                    <div class="benefit-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                </div>
+                
+                <div class="benefit-item" data-aos="fade-left" data-aos-delay="800">
+                    <div class="benefit-number">04</div>
+                    <div class="benefit-content">
+                        <h3>Complete Solution</h3>
+                        <p>Teljes körű szolgáltatás egy helyen. Weboldal + domain + tárhely + támogatás egy csomagban.</p>
+                        <div class="benefit-features">
+                            <span class="feature-tag">Komplett</span>
+                            <span class="feature-tag">Egy helyen</span>
+                            <span class="feature-tag">Támogatott</span>
+                        </div>
+                    </div>
+                    <div class="benefit-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <span class="badge-icon">🔄</span>
+                    <span class="badge-text">Folyamat</span>
+                </div>
+                <h2 class="section-title">
+                    Hogyan <span class="highlight">dolgozunk?</span>
+                </h2>
+                <p class="section-subtitle">
+                    Egyszerű, átlátható és hatékony folyamat a legjobb eredményért
+                </p>
+            </div>
+            
+            <div class="process-grid">
+                <div class="process-step" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="step-header">
+                        <div class="step-number">1</div>
+                        <div class="step-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                    </div>
+                    <div class="step-content">
+                        <h3>Konzultáció</h3>
+                        <p>Megbeszéljük az igényeidet, célkitűzéseidet és elképzeléseidet a projektről.</p>
+                        <div class="step-duration">~30 perc</div>
+                    </div>
+                    <div class="step-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                
+                <div class="process-step" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="step-header">
+                        <div class="step-number">2</div>
+                        <div class="step-icon">
+                            <i class="fas fa-pencil-ruler"></i>
+                        </div>
+                    </div>
+                    <div class="step-content">
+                        <h3>Tervezés</h3>
+                        <p>Elkészítjük az oldal wireframe-jét és design koncepcióját az igényeid alapján.</p>
+                        <div class="step-duration">~6 óra</div>
+                    </div>
+                    <div class="step-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                
+                <div class="process-step" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="step-header">
+                        <div class="step-number">3</div>
+                        <div class="step-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="step-content">
+                        <h3>Fejlesztés</h3>
+                        <p>Lekódoljuk az oldalt modern technológiákkal és felrakjuk a tárhelyre.</p>
+                        <div class="step-duration">~36 óra</div>
+                    </div>
+                    <div class="step-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                
+                <div class="process-step" data-aos="zoom-in" data-aos-delay="800">
+                    <div class="step-header">
+                        <div class="step-number">4</div>
+                        <div class="step-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                    </div>
+                    <div class="step-content">
+                        <h3>Élesítés</h3>
+                        <p>Átadjuk a kész oldalt, beállítjuk az analytics-et és elindítjuk a támogatást.</p>
+                        <div class="step-duration">~6 óra</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <span class="badge-icon">💰</span>
+                    <span class="badge-text">Árazás</span>
+                </div>
+                <h2 class="section-title">
+                    Egyszerű, <span class="highlight">átlátható árazás</span>
+                </h2>
+                <p class="section-subtitle">
+                    Minden benne van, rejtett költségek nélkül
+                </p>
+            </div>
+            
+            <div class="pricing-container">
+                <div class="pricing-card premium-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="pricing-header">
+                        <div class="pricing-badge">Legkedveltebb</div>
+                        <h3 class="pricing-title">Komplett Landing Oldal</h3>
+                        <div class="pricing-subtitle">Minden ami kell egy sikeres online jelenléthez</div>
+                    </div>
+                    
+                    <div class="pricing-price">
+                        <div class="price-main">
+                            <span class="currency">Ft</span>
+                            <span class="amount">45.000</span>
+                        </div>
+                        <div class="price-period">egyszeri fizetés</div>
+                        <div class="price-note">Nincs rejtett költség</div>
+                    </div>
+                    
+                    <div class="pricing-features">
+                        <div class="feature-category">
+                            <h4>Weboldal</h4>
+                            <div class="feature-list">
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Professzionális landing oldal</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Egyedi design</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Responsive (mobil/tablet/desktop)</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>SEO optimalizáció</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Google Analytics beállítás</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-category">
+                            <h4>Domain & Hosting</h4>
+                            <div class="feature-list">
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>.hu domain 1 évre</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>5GB SSD tárhely</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>SSL tanúsítvány</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>99.9% uptime garancia</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-category">
+                            <h4>Támogatás</h4>
+                            <div class="feature-list">
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>48 órás szállítás</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>1 év ingyenes támogatás</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Napi biztonsági mentés</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Email support magyar nyelven</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-footer">
+                        <a href="#contact" class="btn-primary btn-glow pricing-btn">
+                            <span class="btn-text">Megrendelem most</span>
+                            <span class="btn-icon">
+                                <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </a>
+                        <div class="pricing-guarantee">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>30 napos pénzvisszafizetési garancia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pricing Calculator -->
+            <div class="pricing-extras" data-aos="fade-up" data-aos-delay="600">
+                <h3>Extra szolgáltatások</h3>
+                <div class="extras-grid">
+                    <div class="extra-item">
+                        <div class="extra-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="extra-content">
+                            <h4>E-commerce funkciók</h4>
+                            <p>Online webshop integráció</p>
+                        </div>
+                        <div class="extra-price">+25.000 Ft</div>
+                    </div>
+                    
+                    <div class="extra-item">
+                        <div class="extra-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <div class="extra-content">
+                            <h4>Többnyelvűség</h4>
+                            <p>Magyar + 1 idegen nyelv</p>
+                        </div>
+                        <div class="extra-price">+15.000 Ft</div>
+                    </div>
+                    
+                    <div class="extra-item">
+                        <div class="extra-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <div class="extra-content">
+                            <h4>Prémium design</h4>
+                            <p>Advanced animációk és effektek</p>
+                        </div>
+                        <div class="extra-price">+20.000 Ft</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <span class="badge-icon">🎨</span>
+                    <span class="badge-text">Portfólió</span>
+                </div>
+                <h2 class="section-title">
+                    Nézd meg <span class="highlight">munkáinkat</span>
+                </h2>
+                <p class="section-subtitle">
+                    Íme néhány példa korábbi projektjeinkből
+                </p>
+            </div>
+            
+            <!-- Portfolio Filter -->
+            <div class="portfolio-filter" data-aos="fade-up" data-aos-delay="200">
+                <button class="filter-btn active" data-filter="all">Összes</button>
+                <button class="filter-btn" data-filter="business">Üzleti</button>
+                <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+                <button class="filter-btn" data-filter="creative">Kreatív</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="business" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <div class="placeholder-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <span class="portfolio-category">Üzleti</span>
+                                <h3>ProConsult Landing</h3>
+                                <p>Tanácsadó cég bemutató oldala modern dizájnnal</p>
+                                <div class="portfolio-tags">
+                                    <span class="tag">Consulting</span>
+                                    <span class="tag">Corporate</span>
+                                </div>
+                                <div class="portfolio-actions">
+                                    <a href="#" class="portfolio-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <button class="portfolio-expand">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="ecommerce" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <div class="placeholder-icon">
+                                <i class="fas fa-shopping-bag"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <span class="portfolio-category">E-commerce</span>
+                                <h3>FashionHub Store</h3>
+                                <p>Online divatáruház egyedi webshop megoldással</p>
+                                <div class="portfolio-tags">
+                                    <span class="tag">E-commerce</span>
+                                    <span class="tag">Fashion</span>
+                                </div>
+                                <div class="portfolio-actions">
+                                    <a href="#" class="portfolio-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <button class="portfolio-expand">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="creative" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <div class="placeholder-icon">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <span class="portfolio-category">Kreatív</span>
+                                <h3>ArtStudio Gallery</h3>
+                                <p>Művészeti galéria interaktív bemutató oldala</p>
+                                <div class="portfolio-tags">
+                                    <span class="tag">Art</span>
+                                    <span class="tag">Gallery</span>
+                                </div>
+                                <div class="portfolio-actions">
+                                    <a href="#" class="portfolio-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <button class="portfolio-expand">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="business" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <div class="placeholder-icon">
+                                <i class="fas fa-dumbbell"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <span class="portfolio-category">Üzleti</span>
+                                <h3>FitnessPro Gym</h3>
+                                <p>Edzőterem bemutató oldal online foglalási rendszerrel</p>
+                                <div class="portfolio-tags">
+                                    <span class="tag">Fitness</span>
+                                    <span class="tag">Booking</span>
+                                </div>
+                                <div class="portfolio-actions">
+                                    <a href="#" class="portfolio-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <button class="portfolio-expand">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <span class="badge-icon">📞</span>
+                    <span class="badge-text">Kapcsolat</span>
+                </div>
+                <h2 class="section-title">
+                    Készen állsz az <span class="highlight">indulásra?</span>
+                </h2>
+                <p class="section-subtitle">
+                    Vedd fel velünk a kapcsolatot és kezdjük el közösen!
+                </p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right" data-aos-delay="300">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>info@landingpark.hu</p>
+                            <span class="contact-note">Válaszolunk 2 órán belül</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Telefon</h4>
+                            <p>+36 30 123 4567</p>
+                            <span class="contact-note">H-P 9:00 - 18:00</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Live Chat</h4>
+                            <p>Azonnali válasz</p>
+                            <span class="contact-note">Online most</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-guarantee">
+                        <div class="guarantee-icon">
+                            <i class="fas fa-shield-check"></i>
+                        </div>
+                        <div class="guarantee-content">
+                            <h4>Ajánlat garancia</h4>
+                            <p>Ingyenes konzultáció és részletes ajánlat minden megkeresésre</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container" data-aos="fade-left" data-aos-delay="500">
+                    <form class="contact-form glass-card" id="contactForm">
+                        <div class="form-header">
+                            <h3>Kérj ajánlatot</h3>
+                            <p>Töltsd ki az űrlapot és felvesszük veled a kapcsolatot</p>
+                        </div>
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="name">Név *</label>
+                                <input type="text" id="name" name="name" required>
+                                <div class="form-line"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                                <div class="form-line"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Telefon</label>
+                                <input type="tel" id="phone" name="phone">
+                                <div class="form-line"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="company">Cég neve</label>
+                                <input type="text" id="company" name="company">
+                                <div class="form-line"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="project">Projekt leírása *</label>
+                            <textarea id="project" name="project" rows="4" placeholder="Írj pár szót a projektedről, céljaidról és elképzeléseidről..." required></textarea>
+                            <div class="form-line"></div>
+                        </div>
+                        
+                        <div class="form-extras">
+                            <h4>Érdekelnek az extra szolgáltatások?</h4>
+                            <div class="checkbox-group">
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="extras[]" value="ecommerce">
+                                    <span class="checkmark"></span>
+                                    <span class="checkbox-text">E-commerce funkciók</span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="extras[]" value="multilang">
+                                    <span class="checkmark"></span>
+                                    <span class="checkbox-text">Többnyelvűség</span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="extras[]" value="premium">
+                                    <span class="checkmark"></span>
+                                    <span class="checkbox-text">Prémium design</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary btn-glow submit-btn">
+                            <span class="btn-text">Ajánlatot kérek</span>
+                            <span class="btn-icon">
+                                <i class="fas fa-paper-plane"></i>
+                            </span>
+                            <div class="btn-loading">
+                                <div class="spinner"></div>
+                            </div>
+                        </button>
+                        
+                        <div class="form-footer">
+                            <p>
+                                <i class="fas fa-lock"></i>
+                                Az adataid biztonságban vannak. Soha nem adjuk át harmadik félnek.
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main" data-aos="fade-up" data-aos-delay="200">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <rect width="40" height="40" rx="8" fill="url(#footerLogoGradient)"/>
+                                <path d="M12 14L20 22L28 14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <defs>
+                                    <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#667eea"/>
+                                        <stop offset="100%" style="stop-color:#764ba2"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <span class="logo-text">Landingpark</span>
+                    </div>
+                    <p class="footer-description">
+                        Professzionális landing oldalak 48 órán belül. 
+                        Komplett megoldások modern technológiákkal.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links" data-aos="fade-up" data-aos-delay="400">
+                    <div class="footer-section">
+                        <h4>Szolgáltatások</h4>
+                        <ul>
+                            <li><a href="#services">Landing oldalak</a></li>
+                            <li><a href="#services">Domain regisztráció</a></li>
+                            <li><a href="#services">Webhosting</a></li>
+                            <li><a href="#services">SEO optimalizáció</a></li>
+                            <li><a href="#services">Támogatás</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Cég</h4>
+                        <ul>
+                            <li><a href="#benefits">Rólunk</a></li>
+                            <li><a href="#portfolio">Portfólió</a></li>
+                            <li><a href="#process">Folyamat</a></li>
+                            <li><a href="#contact">Kapcsolat</a></li>
+                            <li><a href="#">Karrier</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Támogatás</h4>
+                        <ul>
+                            <li><a href="#">Gyakori kérdések</a></li>
+                            <li><a href="#">Dokumentáció</a></li>
+                            <li><a href="#">Közösségi fórum</a></li>
+                            <li><a href="#contact">Ügyfélszolgálat</a></li>
+                            <li><a href="#">Státusz oldal</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Jogi</h4>
+                        <ul>
+                            <li><a href="#">Adatvédelem</a></li>
+                            <li><a href="#">Felhasználási feltételek</a></li>
+                            <li><a href="#">Cookie szabályzat</a></li>
+                            <li><a href="#">ÁSZF</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom" data-aos="fade-up" data-aos-delay="600">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Landingpark.hu. Minden jog fenntartva.</p>
+                    <div class="footer-badges">
+                        <span class="badge">🇭🇺 Magyar tulajdon</span>
+                        <span class="badge">⚡ 48h szállítás</span>
+                        <span class="badge">🛡️ SSL védett</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/interactions.js"></script>
+    
+    <!-- AOS Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+</html>
